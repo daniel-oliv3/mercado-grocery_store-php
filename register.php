@@ -1,3 +1,26 @@
+<?php
+	
+include 'config.php';
+
+if(isset($_POST['submit'])){
+
+	$name = $_POST['name'];
+	$name = filter_var($name, FILTER_SANITIZE_STRING);
+	$email = $_POST['email'];
+	$email = filter_var($email, FILTER_SANITIZE_STRING);
+	$pass = $_POST['pass'];
+	$pass = filter_var($pass, FILTER_SANITIZE_STRING);
+	$cpass = $_POST['cpass'];
+	$cpass = filter_var($cpass, FILTER_SANITIZE_STRING);
+
+	$image = $_FILES['image']['name'];
+	$image_size = $_FILES['image']['size'];
+	$image_tmp_name = $_FILES['image']['tmp_name'];
+	$image_folder = 'uploader_img/';
+
+}
+	
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
