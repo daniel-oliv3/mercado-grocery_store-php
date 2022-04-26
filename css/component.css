@@ -59,6 +59,38 @@ section {
     margin: 0 auto;
 }
 
+.btn,
+.delete-btn,
+.option-btn {
+    width: 100%;
+    display: block;
+    margin-top: 1rem;
+    border-radius: .5rem;
+    color: var(--white);
+    font-size: 2rem;
+    padding: 1.3rem 3rem;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.btn {
+    background-color: var(--green);
+}
+
+.delete-btn {
+    background-color: var(--red);
+}
+
+.option-btn {
+    background-color: var(--orange);
+}
+
+
+.btn:hover,
+.delete-btn:hover,
+.option-btn:hover {
+    background-color: var(--black);
+}
 
 
 /* ======= Register Form/Formulário de Registro ======= */
@@ -80,10 +112,11 @@ section {
 }
 
 .form-container form h3 {
-    text-align: center;
     font-size: 2.5rem;
     margin-bottom: 1rem;
     color: var(--black);
+    text-transform: uppercase;
+    text-align: center; /*drp*/
 }
 
 
@@ -95,7 +128,40 @@ section {
     border: var(--border);
     padding: 1.2rem 1.4rem;
     border-radius: .5rem;
+    background-color: var(--light-bg);
 }
+
+
+.form-container form p {
+    font-size: 2rem;
+    margin-top: 2.2rem;
+    color: var(--light-color);
+}
+
+
+.form-container form p a {
+    color: var(--green);
+}
+
+
+.form-container form p a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

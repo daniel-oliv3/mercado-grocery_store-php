@@ -22,6 +22,7 @@
 		<input type="password" name="cpass" class="box" placeholder="Confirme Sua Senha" required>
 		<input type="file" name="image" class="box" required accept="image/jpg, image/jpeg, image/png">
 		<input type="submit" name="submit" value="Registrar Agora" class="btn">
+		<p>Já tem uma conta? <a href="login.php">Conecte-se agora</a></p>
 	</form>
 </section>
 
