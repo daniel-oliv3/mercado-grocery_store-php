@@ -92,6 +92,38 @@ section {
     background-color: var(--black);
 }
 
+.message {
+    position: sticky;
+    top: 0;
+    max-width: 1200px;  /*largura máxima*/
+    margin: 0 auto;
+    background-color: var(--light-bg);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    z-index: 10000;
+}
+
+
+.message span {
+    font-size: 2rem;
+    color: var(--black);
+}
+
+
+.message i {
+    cursor: pointer;
+    color: var(--red);
+}
+
+
+.message i {
+    color: var(--black);
+}
+
+
 
 /* ======= Register Form/Formulário de Registro ======= */
 .form-container {
@@ -231,3 +263,12 @@ section {
     }
 
 }
+
+
+
+/*
+Comentários
+
+1 rem é equivalente á 16px , então 1.25rem seria 20px
+
+*/
