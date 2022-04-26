@@ -1,6 +1,6 @@
 <?php
 
-include 'config.php';
+@include 'config.php';
 
 session_start();
 
@@ -11,20 +11,31 @@ if(isset($_POST['submit'])){
    $pass = md5($_POST['pass']);
    $pass = filter_var($pass, FILTER_SANITIZE_STRING);
 
+   $sql = "SELECT * FROM `users` WHERE email = ? AND password = ?";
+   $stmt = $conn->prepare($sql);
+   $stmt->execute([$email, $pass]);
+   $rowCount = $stmt->rowCount();  
 
-   $select = $conn->prepare("SELECT * FROM `users` WHERE email = ? AND password = ?");
-   $select->execute([$email, $pass]);
-   $row = $select->fetch(PDO::FETCH_ASSOC);
+   $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
-   if($select->rowCount() > 0){
-      
-        if($row['user_type'] == 'admin'){
-            $_SESSION['admin_id'] = $row['id'];
-            header('location:admin_page.php');
+   if($rowCount > 0){
 
-        }elseif($row['user_type'] == 'user'){
-            $_SESSION['admin_id'] = $row['id'];
-            header('location:index.php');
+      if($row['user_type'] == 'admin'){
+
+         $_SESSION['admin_id'] = $row['id'];
+         header('location:admin_page.php');
+
+      }elseif($row['user_type'] == 'user'){
+
+         $_SESSION['user_id'] = $row['id'];
+         header('location:home.php');
+
+      }else{
+         $message[] = 'Nenhum usuário encontrado!';
+      }
+
+   }else{
+      $message[] = 'Senha ou email incorretos!';
    }
 
 }
@@ -85,6 +96,7 @@ if(isset($message)){
 	<script src="js/script.js"></script>
 </body>
 </html>
+
 
 <!--
     Autor: Daniel Oliveira
