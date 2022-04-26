@@ -33,10 +33,10 @@ if(isset($_POST['submit'])){
 
          if($insert){
             if($image_size > 2000000){
-               $message[] = 'image size is too large!';
+               $message[] = 'O tamanho da imagem é muito grande!';
             }else{
                move_uploaded_file($image_tmp_name, $image_folder);
-               $message[] = 'registered successfully!';
+               $message[] = 'Registrado com sucesso!';
                header('location:login.php');
             }
          }
