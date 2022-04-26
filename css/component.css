@@ -38,3 +38,76 @@
 *::-webkit-scrollbar-thumb{
    background-color: var(--green);
 }
+
+
+body {
+    background-color: var(--light-bg);
+}
+
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6.5rem;
+}
+
+
+section {
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+/* ======= Register Form/Formulário de Registro ======= */
+.form-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.form-container form {
+    width: 50rem;
+    background-color: var(--white);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+    padding: 2rem;
+}
+
+.form-container form h3 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--black);
+}
+
+
+.form-container form .box {
+    width: 100%;
+    font-size: 1.8rem;
+    margin: 1rem 0;
+    color: var(--black);
+    border: var(--border);
+    padding: 1.2rem 1.4rem;
+    border-radius: .5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======= / ======= */
+/* ======= / ======= */
