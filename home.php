@@ -2,9 +2,11 @@
 
 @include 'config.php';
 
-$admin_id = $_SESSION['admin_id'];
+session_start();
 
-if(!isset($admin_id)){
+$user_id = $_SESSION['user_id'];
+
+if(!isset($user_id)){
 	header('location:login.php');
 }
 
@@ -21,11 +23,11 @@ if(!isset($admin_id)){
 </head>
 <body>
 
-	<?php
-	
-		echo "Pagina Home"
-	
-	?>
+<h1>Página Home</h1>
+
+<a href="logout.php">Sair</a>
+
+
 	
 	<script src="js/script.js"></script>
 </body>

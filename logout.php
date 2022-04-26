@@ -1,3 +1,15 @@
+<?php
+
+@include 'config.php';
+
+$user_id = $_SESSION['user_id'];
+
+if(!isset($admin_id)){
+	header('location:login.php');
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -10,12 +22,7 @@
 </head>
 <body>
 
-	<?php
-	
-		echo "Olá, Mundo!, Sapup3 na área!!!"
-	
-	?>
-	
+
 	<script src="js/script.js"></script>
 </body>
 </html>

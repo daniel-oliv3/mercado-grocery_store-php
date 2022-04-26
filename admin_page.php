@@ -2,13 +2,16 @@
 
 @include 'config.php';
 
-$user_id = $_SESSION['user_id'];
+session_start();
+
+$admin_id = $_SESSION['admin_id'];
 
 if(!isset($admin_id)){
-	header('location:login.php');
+   header('location:login.php');
 }
 
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -26,11 +29,7 @@ if(!isset($admin_id)){
 
 <a href="logout.php">Sair</a>
 
-	<?php
-	
-		echo "Pagina do Administrador"
-	
-	?>
+
 	
 	<script src="js/script.js"></script>
 </body>
