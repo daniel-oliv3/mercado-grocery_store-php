@@ -1,3 +1,14 @@
+<?php
+
+@include 'config.php';
+
+$admin_id = $_SESSION['admin_id'];
+
+if(!isset($admin_id)){
+	header('location:login.php');
+}
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -12,7 +23,7 @@
 
 	<?php
 	
-		echo "Olá, Mundo!, Sapup3 na área!!!"
+		echo "Pagina Home"
 	
 	?>
 	

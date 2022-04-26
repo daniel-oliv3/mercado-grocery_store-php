@@ -58,7 +58,7 @@ if(isset($_POST['submit'])){
 
 <div class="message">
 	<span></span>
-	<i class="fas fatimes" onclick="this.parentElement.remove();"></i>
+	<i class="fas fa-times" onclick="this.parentElement.remove();"></i>
 </div>
 
 <?php
